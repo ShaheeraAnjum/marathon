@@ -1,1 +1,2 @@
 # marathon
+This prototypes belongd to traditional search platforms relied on external links and advertising to create value for users, advertisers, and platforms. With the rise of AI-driven search, users now receive direct answers within the platform, improving speed and convenience. However, this reduces clicks, session time, and exposure to ads, leading to a gradual decline in advertiser engagement. This shift highlights a deeper challenge of maintaining revenue sustainability and redefining value in an AI-powered search ecosystem.
