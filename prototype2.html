@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Search Revenue Reassessment Prototype</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .card {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 15px;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .metric {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>AI Search Revenue Benchmark Reassessment</h1>
+
+<div class="card">
+    <h3>Traditional Search Model</h3>
+    <div class="metric">Impressions: <span id="oldImp">10000</span></div>
+    <div class="metric">CTR: <span id="oldCtr">2%</span></div>
+    <div class="metric">CPC: ₹<span id="oldCpc">10</span></div>
+    <div class="metric"><strong>Expected Revenue:</strong> ₹<span id="oldRevenue">2000</span></div>
+</div>
+
+<div class="card">
+    <h3>AI-Driven Search Model</h3>
+    <div class="metric">Answer Views: <span id="views">8000</span></div>
+    <div class="metric">Avg Attention Time (sec): <span id="time">18</span></div>
+    <div class="metric">Brand Mentions Weight: <span id="brand">0.6</span></div>
+    <div class="metric"><strong>Attention Value Score:</strong> <span id="avs">0</span></div>
+    <div class="metric"><strong>Reassessed Revenue:</strong> ₹<span id="newRevenue">0</span></div>
+</div>
+
+<button onclick="recalculate()">Recalculate Benchmarks</button>
+
+<script>
+    function recalculate() {
+        // Traditional revenue calculation
+        let impressions = 10000;
+        let ctr = 0.02;
+        let cpc = 10;
+        let oldRevenue = impressions * ctr * cpc;
+
+        // AI search metrics
+        let answerViews = 8000;
+        let attentionTime = 18;
+        let brandWeight = 0.6;
+
+        // New KPI: Attention Value Score
+        let attentionValueScore = (attentionTime / 30) * brandWeight;
+
+        // New revenue model (value per meaningful interaction)
+        let valuePerView = 4;
+        let newRevenue = answerViews * attentionValueScore * valuePerView;
+
+        document.getElementById("oldRevenue").innerText = oldRevenue.toFixed(0);
+        document.getElementById("avs").innerText = attentionValueScore.toFixed(2);
+        document.getElementById("newRevenue").innerText = newRevenue.toFixed(0);
+    }
+</script>
+
+</body>
+</html>

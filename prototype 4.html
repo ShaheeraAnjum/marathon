@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Search Revenue Sustainability Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .card {
+            background: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .metric {
+            margin: 6px 0;
+        }
+        button {
+            padding: 10px 15px;
+            background: #9b59b6;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>End-to-End AI Search Monetization Sustainability</h1>
+
+<div class="card">
+    <h3>Intent Capture</h3>
+    <div class="metric">Detected Intent Strength: <span id="intent">0.75</span></div>
+    <div class="metric">Intent Type: <span id="intentType">Commercial</span></div>
+</div>
+
+<div class="card">
+    <h3>Result Presentation</h3>
+    <div class="metric">AI Answer Visibility: <span id="visibility">High</span></div>
+    <div class="metric">Sponsored Integration Score: <span id="integration">0.7</span></div>
+</div>
+
+<div class="card">
+    <h3>Advertiser Value Delivery</h3>
+    <div class="metric">Attention Time (sec): <span id="attention">20</span></div>
+    <div class="metric">Assisted Conversion Probability: <span id="assist">0.4</span></div>
+</div>
+
+<div class="card">
+    <h3>Pricing & Revenue</h3>
+    <div class="metric">Pricing Model: <span id="pricing">Hybrid (CPC + CPE)</span></div>
+    <div class="metric"><strong>Short-Term Revenue:</strong> ₹<span id="shortRevenue">0</span></div>
+    <div class="metric"><strong>Stabilized Long-Term Revenue:</strong> ₹<span id="longRevenue">0</span></div>
+</div>
+
+<button onclick="runModel()">Run Sustainability Model</button>
+
+<script>
+function runModel() {
+
+    // Intent layer
+    let intentStrength = 0.75;
+
+    // Engagement & value
+    let attentionTime = 20;
+    let assistedConversion = 0.4;
+
+    // Pricing parameters
+    let cpc = 10;
+    let engagementValue = 5;
+
+    // Short-term revenue (volatile)
+    let shortTermRevenue = intentStrength * attentionTime * engagementValue;
+
+    // Long-term smoothing (baseline + predictive stability)
+    let baselineGuarantee = 0.7;
+    let longTermRevenue = shortTermRevenue * baselineGuarantee + (assistedConversion * 500);
+
+    document.getElementById("shortRevenue").innerText = shortTermRevenue.toFixed(0);
+    document.getElementById("longRevenue").innerText = longTermRevenue.toFixed(0);
+}
+</script>
+
+</body>
+</html>

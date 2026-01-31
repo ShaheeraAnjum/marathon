@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adaptive AI Search Prototype</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .secondary {
+      background: #e5e7eb;
+      color: black;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .tab {
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #e5e7eb;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .tab.active {
+      background: #2563eb;
+      color: white;
+    }
+
+    ul {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+
+    .link {
+      color: #2563eb;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <h1>Adaptive AI Search System</h1>
+    <p class="subtitle">
+      Interpreting evolving user behavior without misclassifying value loss
+    </p>
+
+    <!-- Search Box -->
+    <div class="card">
+      <input type="text" placeholder="Ask anything…" />
+      <div class="buttons">
+        <button class="primary">Get Direct Answer</button>
+        <button class="secondary">Explore Sources</button>
+      </div>
+    </div>
+
+    <!-- AI Answer -->
+    <div class="card">
+      <h3>AI Generated Answer</h3>
+      <p>
+        This answer satisfies most informational intent instantly.
+        No click does not imply disengagement — it may signal success.
+      </p>
+      <span class="link">Expand reasoning</span>
+    </div>
+
+    <!-- Behavioral Interpretation Layer -->
+    <div class="card">
+      <div class="tabs">
+        <div class="tab active">Interpretation</div>
+        <div class="tab">New Signals</div>
+        <div class="tab">Revenue Safety</div>
+      </div>
+
+      <ul>
+        <li>Short sessions are treated as potential success</li>
+        <li>Exploratory queries are flagged as transitional behavior</li>
+        <li>Metrics are evaluated over rolling time windows</li>
+      </ul>
+    </div>
+
+    <!-- New Signals -->
+    <div class="card">
+      <h3>New Engagement Signals</h3>
+      <ul>
+        <li>Answer expansion interactions</li>
+        <li>Query reformulation rate</li>
+        <li>Follow-up intent depth</li>
+        <li>Return visits for similar queries</li>
+      </ul>
+    </div>
+
+    <!-- Revenue Safety -->
+    <div class="card">
+      <h3>Revenue Safety Layer</h3>
+      <ul>
+        <li>Revenue decisions delayed until behavior stabilizes</li>
+        <li>Ads introduced contextually within AI answers</li>
+        <li>High satisfaction sessions remain high-value</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>

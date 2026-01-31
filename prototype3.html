@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fair Monetization Transition Prototype</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef1f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #34495e;
+        }
+        .card {
+            background: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .metric {
+            margin: 6px 0;
+        }
+        button {
+            padding: 10px 15px;
+            background: #2ecc71;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Advertiser Fairness in AI Monetization</h1>
+
+<div class="card">
+    <h3>Legacy Advertiser</h3>
+    <div class="metric">CTR: <span id="legacyCtr">2%</span></div>
+    <div class="metric">CPC: ₹<span id="legacyCpc">12</span></div>
+    <div class="metric">Baseline Protection: <span id="baseline">Yes</span></div>
+    <div class="metric"><strong>Adjusted Revenue:</strong> ₹<span id="legacyRevenue">0</span></div>
+</div>
+
+<div class="card">
+    <h3>Adaptive Advertiser</h3>
+    <div class="metric">Attention Time (sec): <span id="attention">22</span></div>
+    <div class="metric">Interaction Score: <span id="interaction">0.8</span></div>
+    <div class="metric"><strong>AI-Native Revenue:</strong> ₹<span id="aiRevenue">0</span></div>
+</div>
+
+<div class="card">
+    <h3>System Fairness Layer</h3>
+    <div class="metric">Innovation Weight: <span id="innovation">0.6</span></div>
+    <div class="metric">Legacy Safety Multiplier: <span id="safety">0.8</span></div>
+</div>
+
+<button onclick="calculate()">Run Fair Monetization Model</button>
+
+<script>
+function calculate() {
+
+    // Legacy advertiser (protected)
+    let impressions = 9000;
+    let ctr = 0.02;
+    let cpc = 12;
+    let safetyMultiplier = 0.8;
+    let legacyRevenue = impressions * ctr * cpc * safetyMultiplier;
+
+    // Adaptive advertiser (AI-native)
+    let views = 7000;
+    let attentionTime = 22;
+    let interactionScore = 0.8;
+    let valuePerUnit = 5;
+
+    let aiRevenue = views * (attentionTime / 30) * interactionScore * valuePerUnit;
+
+    document.getElementById("legacyRevenue").innerText = legacyRevenue.toFixed(0);
+    document.getElementById("aiRevenue").innerText = aiRevenue.toFixed(0);
+}
+</script>
+
+</body>
+</html>
